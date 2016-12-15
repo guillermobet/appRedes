@@ -4,8 +4,8 @@
       Home Page
     </ion-title>
     <ion-buttons end>
-		<button (click)="goToProfile()">
-		  <ion-icon name="person"></ion-icon>
+		<button>
+		  Saldo
 		</button>
     </ion-buttons>
   </ion-navbar>
@@ -16,5 +16,30 @@
 <button ion-button block color="primary" (click)="goToContacts()">
   Contacts
 </button>
+
+ <form [formGroup]="transferForm" novalidate>
+
+
+    <ion-item>
+      <ion-label stacked>Email</ion-label>
+      <ion-input #email formControlName="email" type="email" 
+        placeholder="Your email address"
+       ></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label stacked>Cantidad</ion-label>
+      <ion-input #password formControlName="money" type="number"
+        placeholder="Ingrese monto"
+        ></ion-input>
+    </ion-item>
+
+
+    <button ion-button block type="submit">
+      Transferir
+    </button>
+
+  </form>
 
 </ion-content>
