@@ -1,21 +1,22 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { LoginPage } from '../login/login'
-import { AuthData } from '../../providers/auth-data';
-
+import { ProfilePage } from '../profile/profile';
+import { ContactsPage } from '../contacts/contacts';
 
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'home.html',
 })
 export class HomePage {
+  constructor(public nav: NavController) {
+    this.nav = nav;
+  }
 
-  constructor(public nav: NavController, public authData: AuthData) {}
+  goToProfile() {
+    this.nav.push(ProfilePage);
+  }
 
-logOut(){
-  this.authData.logoutUser().then(() => {
-    this.nav.setRoot(LoginPage);
-  });
-}
-
+  goToContacts() {
+    this.nav.push(ContactsPage);
+  }
 }

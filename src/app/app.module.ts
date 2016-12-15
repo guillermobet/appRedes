@@ -11,7 +11,7 @@ import { SignupPage } from '../pages/signup/signup';
 
 //import providers
 import { AuthData } from '../providers/auth-data';
-import { EventData } from '../providers/event-data';
+import { ContactsData } from '../providers/contacts-data';
 import { ProfileData } from '../providers/profile-data';
 
 @NgModule({
@@ -35,6 +35,6 @@ import { ProfileData } from '../providers/profile-data';
     ResetPasswordPage,
     SignupPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, AuthData, EventData, ProfileData]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, AuthData, ContactsData, ProfileData]
 })
 export class AppModule {}
