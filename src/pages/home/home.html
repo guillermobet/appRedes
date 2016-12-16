@@ -4,20 +4,19 @@
       Home Page
     </ion-title>
     <ion-buttons end>
-		<button>
-		  Saldo
+		<button (click)="goToProfile()">
+		  {{userProfile?.credit}} Creditos
 		</button>
+    <button ion-button icon-only (click)="logOut()">
+        <ion-icon name="log-out"></ion-icon>
+    </button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding scroll="false">
 
-<button ion-button block color="primary" (click)="goToContacts()">
-  Contacts
-</button>
-
- <form [formGroup]="transferForm" novalidate>
+ <form [formGroup]="transferForm" (submit)="transferMoney()" novalidate>
 
 
     <ion-item>

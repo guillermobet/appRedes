@@ -21,6 +21,20 @@
       Personal Information
     </ion-list-header>
 
+    <ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col width-50>
+            Credits
+          </ion-col>
+          <ion-col *ngIf="userProfile?.credit">
+            {{userProfile?.credit}}
+          </ion-col>
+          
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+
     <ion-item (click)="updateName()">
       <ion-grid>
         <ion-row>
