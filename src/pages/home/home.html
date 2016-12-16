@@ -4,39 +4,35 @@
       Home Page
     </ion-title>
     <ion-buttons end>
-		<button (click)="goToProfile()">
-		  {{userProfile?.credit}} Creditos
-		</button>
-    <button ion-button icon-only (click)="logOut()">
-        <ion-icon name="log-out"></ion-icon>
+    <button ion-button icon-only (click)="goToProfile()">
+      {{userProfile?.credit}} Creditos  
+      <ion-icon name="person"></ion-icon>
     </button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding scroll="false">
-
  <form [formGroup]="transferForm" (submit)="transferMoney()" novalidate>
-
 
     <ion-item>
       <ion-label stacked>Email</ion-label>
       <ion-input #email formControlName="email" type="email" 
-        placeholder="Your email address"
+        placeholder="Enter email of transfer destination"
        ></ion-input>
     </ion-item>
 
 
     <ion-item>
-      <ion-label stacked>Cantidad</ion-label>
-      <ion-input #password formControlName="money" type="number"
-        placeholder="Ingrese monto"
+      <ion-label stacked>Amount</ion-label>
+      <ion-input formControlName="money" type="number"
+        placeholder="Enter amount to transfer"
         ></ion-input>
     </ion-item>
 
 
     <button ion-button block type="submit">
-      Transferir
+      Transfer
     </button>
 
   </form>

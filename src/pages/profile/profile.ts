@@ -22,7 +22,8 @@ export class ProfilePage {
     public authData: AuthData, public alertCtrl: AlertController) {
     this.nav = nav;
     this.profileData = profileData;
-
+    this.authData = authData;
+    this.alertCtrl = alertCtrl;
     this.profileData.getUserProfile().on('value', (data) => {
       this.userProfile = data.val();
       this.birthDate = this.userProfile.birthDate;

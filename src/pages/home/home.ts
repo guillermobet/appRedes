@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { NavController, LoadingController } from 'ionic-angular';
 import { ProfilePage } from '../profile/profile';
 import { LoginPage } from '../login/login';
-import { ContactsPage } from '../contacts/contacts';
 import { ProfileData } from '../../providers/profile-data';
 import { FormBuilder, Validators } from '@angular/forms'
 import { AuthData } from '../../providers/auth-data';
@@ -30,10 +29,6 @@ export class HomePage {
 
   goToProfile() {
     this.nav.push(ProfilePage);
-  }
-
-  goToContacts() {
-    this.nav.push(ContactsPage);
   }
 
   logOut(){
