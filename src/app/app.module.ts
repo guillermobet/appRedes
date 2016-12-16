@@ -12,7 +12,6 @@ import { ListaPage } from '../pages/lista/lista';
 
 //import providers
 import { AuthData } from '../providers/auth-data';
-import { ContactsData } from '../providers/contacts-data';
 import { ProfileData } from '../providers/profile-data';
 
 @NgModule({
@@ -38,6 +37,6 @@ import { ProfileData } from '../providers/profile-data';
     SignupPage,
     ListaPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, AuthData, ContactsData, ProfileData]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, AuthData, ProfileData]
 })
 export class AppModule {}

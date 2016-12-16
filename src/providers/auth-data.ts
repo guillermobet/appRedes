@@ -26,8 +26,7 @@ export class AuthData {
   };
 
   signupUser(email: string, password: string): any {
-    return this.fireAuth.createUserWithEmailAndPassword(email, password)
-      .then((newUser) => {
+    return this.fireAuth.createUserWithEmailAndPassword(email, password).then((newUser) => {
         this.userProfile.child(newUser.uid).set({
           email: email,
           credit: 500
@@ -39,7 +38,7 @@ export class AuthData {
   	return this.fireAuth.sendPasswordResetEmail(email);
   };
 
-  logoutUser(): any {
+  logoutUser() {
   	return this.fireAuth.signOut();
   };
 

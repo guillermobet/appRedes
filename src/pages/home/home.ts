@@ -2,8 +2,11 @@ import { Component } from '@angular/core';
 import { NavController, LoadingController } from 'ionic-angular';
 import { ProfilePage } from '../profile/profile';
 import { LoginPage } from '../login/login';
+<<<<<<< HEAD
 import { ListaPage } from '../lista/lista';
 import { ContactsPage } from '../contacts/contacts';
+=======
+>>>>>>> 9e0ea929881dae540e8e91d1e8f8c6abf26852e7
 import { ProfileData } from '../../providers/profile-data';
 import { FormBuilder, Validators } from '@angular/forms'
 import { AuthData } from '../../providers/auth-data';
@@ -33,6 +36,7 @@ export class HomePage {
     this.nav.push(ProfilePage);
   }
 
+<<<<<<< HEAD
   goToLista() {
     this.nav.push(ListaPage);
   }
@@ -41,6 +45,8 @@ export class HomePage {
     this.nav.push(ContactsPage);
   }
 
+=======
+>>>>>>> 9e0ea929881dae540e8e91d1e8f8c6abf26852e7
   logOut(){
     this.authData.logoutUser().then(() => {
       this.nav.setRoot(LoginPage);

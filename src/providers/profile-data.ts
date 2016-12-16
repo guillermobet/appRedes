@@ -23,19 +23,8 @@ export class ProfileData {
     this.userProfile = firebase.database().ref('/userProfile');
   }
 
-  getUserProfile(): any {
-    return this.userProfile.child(this.currentUser.uid);
-  }
-
   getUserProfileUID(uid: string): any{
     return this.userProfile.child(uid);
-  }
-
-  updateName(firstName: string, lastName: string): any {
-    return this.userProfile.child(this.currentUser.uid).update({
-      firstName: firstName,
-      lastName: lastName,
-    });
   }
 
   setCredit(ammount: number): any {
@@ -47,6 +36,17 @@ export class ProfileData {
   remoteSetCredit(other: string, ammount: number): any {
     return firebase.database().ref('/userProfile/'+other).update({
       credit: ammount
+    });
+  }
+
+  getUserProfile(): any {
+    return this.userProfile.child(this.currentUser.uid);
+  }
+
+  updateName(firstName: string, lastName: string): any {
+    return this.userProfile.child(this.currentUser.uid).update({
+      firstName: firstName,
+      lastName: lastName,
     });
   }
 
