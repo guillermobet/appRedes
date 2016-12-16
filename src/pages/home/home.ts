@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, LoadingController } from 'ionic-angular';
 import { ProfilePage } from '../profile/profile';
 import { LoginPage } from '../login/login';
+import { ListaPage } from '../lista/lista';
 import { ContactsPage } from '../contacts/contacts';
 import { ProfileData } from '../../providers/profile-data';
 import { FormBuilder, Validators } from '@angular/forms'
@@ -30,6 +31,10 @@ export class HomePage {
 
   goToProfile() {
     this.nav.push(ProfilePage);
+  }
+
+  goToLista() {
+    this.nav.push(ListaPage);
   }
 
   goToContacts() {
@@ -61,6 +66,7 @@ export class HomePage {
                 var waiting = data.val();
                 self.profileData.setCredit(self.userProfile.credit - self.transferForm.value.money);
                 self.profileData.remoteSetCredit(i, parseInt(waiting.credit) + parseInt(self.transferForm.value.money) );
+                self.profileData.addRecord(waiting.email,self.userProfile.email,self.transferForm.value.money);
               });
              }
            }

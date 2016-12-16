@@ -8,6 +8,7 @@ import { LoginPage } from '../pages/login/login';
 import { ProfilePage } from '../pages/profile/profile';
 import { ResetPasswordPage } from '../pages/reset-password/reset-password';
 import { SignupPage } from '../pages/signup/signup';
+import { ListaPage } from '../pages/lista/lista';
 
 //import providers
 import { AuthData } from '../providers/auth-data';
@@ -21,7 +22,8 @@ import { ProfileData } from '../providers/profile-data';
     LoginPage,
     ProfilePage,
     ResetPasswordPage,
-    SignupPage
+    SignupPage,
+    ListaPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -33,7 +35,8 @@ import { ProfileData } from '../providers/profile-data';
     LoginPage,
     ProfilePage,
     ResetPasswordPage,
-    SignupPage
+    SignupPage,
+    ListaPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, AuthData, ContactsData, ProfileData]
 })

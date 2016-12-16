@@ -73,4 +73,14 @@ export class ProfileData {
       console.log(error);
     });
   }
+
+  addRecord(first: string, second: string, ammount: number){
+    var records = firebase.database().ref('/records');
+    var newRecord = records.push();
+    newRecord.set({
+      sender: first,
+      receiver: second,
+      money: ammount
+    });
+  }
 }

@@ -16,11 +16,11 @@ export class MyApp {
   constructor(platform: Platform) {
 
     firebase.initializeApp({
-      apiKey: "AIzaSyDCRGFqw0D3e7rLgOL8RjxjIni_xZz2SJg",
-      authDomain: "aurea-46900.firebaseapp.com",
-      databaseURL: "https://aurea-46900.firebaseio.com",
-      storageBucket: "aurea-46900.appspot.com",
-      messagingSenderId: "751011646268"
+      apiKey: "AIzaSyCBrymRmqhCV5-RMpdYEWmW8m0JUjyARik",
+    authDomain: "real-2c494.firebaseapp.com",
+    databaseURL: "https://real-2c494.firebaseio.com",
+    storageBucket: "real-2c494.appspot.com",
+    messagingSenderId: "825836910279"
     });
 
     firebase.auth().onAuthStateChanged((user) => {

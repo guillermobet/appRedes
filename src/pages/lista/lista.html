@@ -1,0 +1,30 @@
+<!--
+  Generated template for the Lista page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Lista</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<ion-list *ngIf="transacciones"> 
+		<ion-item> 
+			<ion-label>Receiver</ion-label> ->
+			<ion-label>Sender</ion-label> 
+			<ion-label>Money</ion-label>
+		</ion-item>
+		<ion-item *ngFor="let record of transacciones"> 
+			<ion-label>{{record.receiver}}</ion-label> ->
+			<ion-label>{{record.sender}}</ion-label> 
+			  <ion-label>{{record.money}}$</ion-label>
+		</ion-item> 
+	</ion-list>
+
+</ion-content>
